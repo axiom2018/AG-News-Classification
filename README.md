@@ -4,8 +4,44 @@
 ## Description
 <p align="left"> 
   A multi-classification NLP project with multiple neural networks used for comparison. Link to dataset is <a href="https://www.kaggle.com/datasets/amananandrai/ag-news-classification-dataset">here</a>.
-  The code is <b><i>HEAVILY</i></b> commented with great detail in every section to ensure reader understands as much of the code as possible. Additionally, 
-  two neural network models, with specific layers, are created to tackle this project: 
+  The code is <b><i>HEAVILY</i></b> commented with great detail in every section to ensure reader understands as much of the code as possible. I revisted the ag_news dataset a long while after, when I 
+  learned more about NLP. So there's 2 notebook to see and I describe them in detail. The first one mentioned is the most recent one.
+
+  <h3>AG News 3/26/2024 UPDATED Project</h3>
+  This notebook uses not 1, not 2, but 3 (technically) models on the dataset. Technically because Optuna, the hyperparameter tuning library found here <a href="https://optuna.readthedocs.io/en/stable/">here</a>.
+  This project explores in depth how the <b>BASICS</b> of lstms, rnns, and combining lstms with embedding bag models, can all work. Below is the project breakdown:
+
+  1) Exploratory Data Analysis
+  2) Preprocessing
+     - Using Regex, & PyTorch 
+  3) Tokenization
+  4) Vocab
+  5) Padding
+  6) Altering labels
+  7) Dataset & Dataloaders
+  8) <b>Understanding Embedding & LSTM section</b>
+      - Section dedicated to understanding the lstm mathematics, process and steps in depth
+  9) Custom Validation & Training functions
+      - PyTorch Embedding bag layers require offset vectors. However, nn.LSTM & nn.RNN do not yet the train/validation functions supports all 3 now with a bit a tweaking.
+    
+  <b><i>Now for the models!</i></b>
+  1) Lstm
+     - Lstm input test. Like section 8 above, this helps to understand the math, process and steps of the input into the ltm
+  4) Rnn
+     - Rnn input test. For same reason above.
+  5) Building data for lstm & embedding bag layer
+  6) Lstm & embedding bag model
+     - Lstm & embedding bag input test.
+  7) Graphing results of all 3
+  8) Predictions/Evaluation
+  9) Optuna
+     - Creating smaller portion of data for the various types of models to be created <b><i>DURING</i></b> hyperparameter tuning
+     - Saving the best model & optimizer during tuning
+  10) Difference between Rnn model Optuna created vs Original Rnn
+        
+
+  <h3>AG News 2/9/2024 Project</h3>
+  In this notebook there are two neural network models, with specific layers, used to tackle this dataset: 
 
   - Embedding
   - Embedding Bag
